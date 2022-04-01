@@ -11,5 +11,16 @@ namespace File1CSharp.Entities
         public string Name { get; set; }
         public double Value { get; set; }
         public int Amount { get; set; }
+
+        public Product(string name, double value, int amount)
+        {
+            Name = name;
+            Value = value;
+            Amount = amount;
+        }
+        public double CalculateTotalValue()
+        {
+            return Value * Amount;
+        }
     }
 }
